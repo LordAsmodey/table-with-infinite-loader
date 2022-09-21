@@ -52,6 +52,7 @@ export const AddPersonForm: React.FC<Props> = React.memo((props) => {
         .then((response) => {
           onAddPerson(response);
           clearForm();
+          setIsOpen(false);
         })
         .catch(() => setIsServerError(true));
     }
@@ -112,7 +113,6 @@ export const AddPersonForm: React.FC<Props> = React.memo((props) => {
                   label="IP Address"
                   isIp
                   required
-                  minLength={8}
                   onChange={setIp}
                 />
 

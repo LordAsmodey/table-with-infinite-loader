@@ -21,7 +21,7 @@ export const PeopleTable: React.FC<Props> = React.memo((props) => {
 
   return (
     <>
-      <table className="table is-hoverable is-fullwidth">
+      <table className="table is-hoverable is-fullwidth p-3">
         <thead>
           <tr>
             <th>ID</th>
