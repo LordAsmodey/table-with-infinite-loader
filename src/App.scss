@@ -1,3 +1,13 @@
-.starter {
-  font-size: 18px;
+.app {
+  max-width: 1200px;
+  margin: 16px auto 0;
+  padding: 16px;
+  border: #e1e1e1 1px solid;
+  height: 100vh;
+  overflow-y: auto;
+
+  &__control-items {
+    height: 80px;
+    background-color: #dbdbdb;
+  }
 }

@@ -13,6 +13,7 @@ module.exports = {
     semi: 0,
     'no-proto': 0,
     'no-unused-vars': 0,
+    'max-len': ['error', { code: 80 }],
 
     // TypeScript
     '@typescript-eslint/no-unused-vars': ['error'],
