@@ -3,7 +3,13 @@ import { addedPerson, Person } from '../Types/Person';
 const BASE_URL = 'http://localhost:4000/people';
 
 export function getPeople(page: number, limit: number): Promise<Person[]> {
-  return fetch(`${BASE_URL}?_page=${page}&_limit=${limit}`)
+  return fetch(`${BASE_URL}?_page=${page}&_limit=${limit}`, {
+    method: 'GET',
+    headers: {
+      'Access-Control-Allow-Origin': 'http://localhost:3000',
+      'Access-Control-Allow-Headers': '*',
+    },
+  })
     .then(res => {
       if (res.ok) {
         return res.json();
